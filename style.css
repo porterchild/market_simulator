@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.simulation-controls {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.simulation-controls button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+.simulation-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.simulation-controls label {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.simulation-controls input[type="number"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 80px;
+}
+
+.market-data {
+    /* Removed flex properties as content will now stack vertically */
+    margin-bottom: 20px;
+}
+
+.order-book-container {
+    width: 100%; /* Make order book full width */
+    margin-bottom: 20px; /* Add some space below order book */
+}
+
+.price-chart-container {
+    width: 100%; /* Make price chart full width */
+}
+
+.order-book {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    min-height: 300px;
+}
+
+.order-book .bids, .order-book .asks {
+    width: 48%;
+}
+
+.order-book ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.order-book li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9em;
+}
+
+.order-book li:last-child {
+    border-bottom: none;
+}
+
+.bids li {
+    color: #28a745; /* Green for bids */
+}
+
+.asks li {
+    color: #dc3545; /* Red for asks */
+}
+
+#price-chart {
+    width: 100%;
+    height: 450px; /* Increased height for better visibility and navigability */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.current-info {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 1.1em;
+}
+
+.current-info p {
+    margin: 5px 0;
+}
+
+.current-info span {
+    font-weight: bold;
+}

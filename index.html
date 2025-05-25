@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Market Simulator</h1>
+
+        <div class="simulation-controls">
+            <button id="start-simulation">Start Simulation</button>
+            <button id="stop-simulation" disabled>Stop Simulation</button>
+            <label for="tick-speed">Tick Speed (ms):</label>
+            <input type="number" id="tick-speed" value="10" min="10">
+        </div>
+
+        <div class="market-data">
+            <div class="order-book-container">
+                <h2>Order Book</h2>
+                <div class="order-book">
+                    <div class="bids">
+                        <h3>Bids (Buy Orders)</h3>
+                        <ul id="buy-orders">
+                            <!-- Buy orders will be listed here -->
+                        </ul>
+                    </div>
+                    <div class="asks">
+                        <h3>Asks (Sell Orders)</h3>
+                        <ul id="sell-orders">
+                            <!-- Sell orders will be listed here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of market-data -->
+
+        <div class="price-chart-container">
+            <h2>Price Chart</h2>
+            <canvas id="price-chart"></canvas>
+        </div>
+
+        <div class="current-info">
+            <p>Current Price: <span id="current-price">N/A</span></p>
+            <p>Tick: <span id="current-tick">0</span></p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
